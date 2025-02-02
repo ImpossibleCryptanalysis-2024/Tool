@@ -1,4 +1,4 @@
-MILP Model for the ToSC 2025-1 Submission "Optimizing Key Recovery in Impossible Cryptanalysis and Its Automated Tool". The release version will be open-sourced after being accepted.
+MILP Model for the paper "Optimizing Key Recovery in Impossible Cryptanalysis and Its Automated Tool". The release version will be open-sourced after being accepted.
 
 Full search space provided. You can set the `minDistLength` in the macro definition based on the known number of rounds of distinguisher and modify the main() function to shrink the search space. The single-key or related-key can be set in the `keyschedule()` function.
 
