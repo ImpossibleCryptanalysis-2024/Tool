@@ -1,8 +1,9 @@
-MILP Model for the paper "Optimizing Key Recovery in Impossible Cryptanalysis and Its Automated Tool". The release version will be open-sourced after being accepted.
+This is the source code of the MILP Model for the paper ["Optimizing Key Recovery in Impossible Cryptanalysis and Its Automated Tool"](https://eprint.iacr.org/2025/158). The release version will be open-sourced after being accepted.
 
 Full search space provided. You can set the `minDistLength` in the macro definition based on the known number of rounds of distinguisher and modify the main() function to shrink the search space. The single-key or related-key can be set in the `keyschedule()` function.
 
-Test Environment: Ubuntu 20.04.06, Gurobi 10.01.
+Test Environment: 
+```Ubuntu 20.04.06, Gurobi 10.01.
 
 Model: 
  - CryptanalyticTables.cpp:  Computation of Tables including DBCT*, iUBCT, iLBCT...
@@ -19,6 +20,7 @@ Macro definition:
  - midRound: Pre-defined round number of E_m (contradiction round)
 
 The main variable declarations are as follows:
+```cpp
 // Variables
 // This model focus on the difference propagation.
 // E = Ef ○ Ed ○ Eb
@@ -38,3 +40,4 @@ The main variable declarations are as follows:
 //         1 0: any (can be zero)								   						   2: in Guess-Filter					   g>=1 => k=1		
 //		   1 1: zero																	   i=0 => g=0							   Key bridge (deduce the known roundkey by key schedule)
 //
+```
